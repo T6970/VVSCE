@@ -1,0 +1,162 @@
+{
+  "categories": {
+    "variables": "#ff6c00",
+    "functions": "#ff3080",
+    "objects"  : "#2020ff",
+    "classes"  : "#0077ee",
+    "control"  : "#bb6600",
+    "events"   : "#ff9911",
+    "DOM"      : "#ffcc00",
+    "async"    : "#00ccff",
+    "errors"   : "#ff3333",
+    "modules"  : "#666666",
+    "operators": "#008800"
+  },
+  "snippets": [
+    {
+      "code": "let $0 = $1;",
+      "name": "Declare variable",
+      "category": "variables"
+    },
+    {
+      "code": "const $0 = $1;",
+      "name": "Declare constant",
+      "category": "variables"
+    },
+    {
+      "code": "function $0($1) {\n\t$2\n}",
+      "name": "Function declaration",
+      "category": "functions"
+    },
+    {
+      "code": "const $0 = ($1) => {\n\t$2\n};",
+      "name": "Arrow function declaration",
+      "category": "functions"
+    },
+    {
+      "code": "class $0 {\n\tconstructor($1) {\n\t\t$2\n\t}\n}",
+      "name": "Class declaration",
+      "category": "classes"
+    },
+    {
+      "code": "try {\n\t$0\n} catch ($1) {\n\t$2\n}",
+      "name": "Try-catch block",
+      "category": "errors"
+    },
+    {
+      "code": "throw new $0Error('$1');",
+      "name": "Throw an error",
+      "category": "errors"
+    },
+    {
+      "code": "import $0 from '$1';",
+      "name": "Import module",
+      "category": "modules"
+    },
+    {
+      "code": "export const $0 = $1;",
+      "name": "Export constant",
+      "category": "modules"
+    },
+    {
+      "code": "export function $0($1) {\n\t$2\n}",
+      "name": "Export function",
+      "category": "modules"
+    },
+    {
+      "code": "$0.addEventListener('$1', ($2) => {\n\t$3\n});",
+      "name": "Add event listener",
+      "category": "events"
+    },
+    {
+      "code": "document.getElementById('$0');",
+      "name": "Get element by ID",
+      "category": "DOM"
+    },
+    {
+      "code": "async function $0($1) {\n\t$2\n}",
+      "name": "Async function declaration",
+      "category": "async"
+    },
+    {
+      "code": "await $0;",
+      "name": "Await expression",
+      "category": "async"
+    },
+    {
+      "code": "if ($0) {\n\t$1\n} else {\n\t$2\n}",
+      "name": "If-else statement",
+      "category": "control"
+    },
+    {
+      "code": "for (let $0 = 0; $0 < $1; $0++) {\n\t$2\n}",
+      "name": "For loop",
+      "category": "control"
+    },
+    {
+      "code": "while ($0) {\n\t$1\n}",
+      "name": "While loop",
+      "category": "control"
+    },
+    {
+      "code": "const $0 = [$1];",
+      "name": "Array declaration",
+      "category": "objects"
+    },
+    {
+      "code": "const $0 = {$1: $2};",
+      "name": "Object declaration",
+      "category": "objects"
+    },
+    {
+      "code": "$0.$1 = $2;",
+      "name": "Set object property",
+      "category": "objects"
+    },
+    {
+      "code": "$0[$1] = $2;",
+      "name": "Set array element",
+      "category": "objects"
+    },
+    {
+      "code": "($0 + $1);",
+      "name": "Addition",
+      "category": "operators"
+    },
+    {
+      "code": "($0 - $1);",
+      "name": "Subtraction",
+      "category": "operators"
+    },
+    {
+      "code": "($0 * $1);",
+      "name": "Multiplication",
+      "category": "operators"
+    },
+    {
+      "code": "($0 / $1);",
+      "name": "Division",
+      "category": "operators"
+    },
+    {
+      "code": "($0 % $1);",
+      "name": "Modulo",
+      "category": "operators"
+    },
+    {
+      "code": "($0 && $1);",
+      "name": "Logical AND",
+      "category": "operators"
+    },
+    {
+      "code": "($0 || $1);",
+      "name": "Logical OR",
+      "category": "operators"
+    },
+    {
+      "code": "(!$0);",
+      "name": "Logical NOT",
+      "category": "operators"
+    }
+  ]
+}

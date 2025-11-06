@@ -1,0 +1,67 @@
+{
+  "categories": {
+    "structure": "#ff6c00",
+    "text": "#ff3080",
+    "media": "#2020ff",
+    "forms": "#0077ee",
+    "tables": "#bb6600",
+    "links": "#ff9911",
+    "metadata": "#ffcc00",
+    "scripts": "#00ccff",
+    "styles": "#ff3333",
+    "semantics": "#666666",
+    "others": "#008800"
+  },
+  "snippets": [
+    {
+      "code": "<!DOCTYPE html>\n<html lang=\"$1\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width\", initial-scale=1.0\">\n\t<title>$2</title>\n</head>\n<body>\n\t$0\n</body>\n</html>",
+      "name": "Top HTML structure",
+      "category": "structure"
+    },
+    {
+      "code": "<h1>$0</h1>",
+      "name": "Heading 1",
+      "category": "text"
+    },
+    {
+      "code": "<h2>$0</h2>",
+      "name": "Heading 2",
+      "category": "text"
+    },
+    {
+      "code": "<h3>$0</h3>",
+      "name": "Heading 3",
+      "category": "text"
+    },
+    {
+      "code": "<h4>$0</h4>",
+      "name": "Heading 4",
+      "category": "text"
+    },
+    {
+      "code": "<h5>$0</h5>",
+      "name": "Heading 5",
+      "category": "text"
+    },
+    {
+      "code": "<h6>$0</h6>",
+      "name": "Heading 6",
+      "category": "text"
+    },
+    {
+      "code": "<p>$0</p>",
+      "name": "Paragraph",
+      "category": "text"
+    },
+    {
+      "code": "<img src=\"$0\" alt=\"$1\">",
+      "name": "Image",
+      "category": "media"
+    },
+    {
+      "code": "<a href=\"$0\">$1</a>",
+      "name": "Hyperlink",
+      "category": "links"
+    }
+  ]
+}

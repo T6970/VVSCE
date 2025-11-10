@@ -1,5 +1,6 @@
 {
   "categories": {
+    "console"  : "#eecc00",
     "variables": "#ff6c00",
     "functions": "#ff3080",
     "objects"  : "#2020ff",
@@ -7,156 +8,224 @@
     "control"  : "#bb6600",
     "events"   : "#ff9911",
     "DOM"      : "#ffcc00",
-    "async"    : "#00ccff",
+    "operators": "#008800",
+    "math"     : "#0033ff",
     "errors"   : "#ff3333",
     "modules"  : "#666666",
-    "operators": "#008800"
+    "async"    : "#ffccff"
   },
   "snippets": [
+
     {
-      "code": "let $0 = $1;",
-      "name": "Declare variable",
+      "name": "Log to console",
+      "code": "console.log(message);",
+      "category": "console"
+    },
+    {
+      "name": "Error in console",
+      "code": "console.error(message);",
+      "category": "errors"
+    },
+    {
+      "name": "Warning in console",
+      "code": "console.warn(message);",
+      "category": "console"
+    },
+    {
+      "name": "Alert message",
+      "code": "alert(message);",
+      "category": "console"
+    },
+    {
+      "name": "Prompt input",
+      "code": "const input = prompt(message, default);",
+      "category": "console"
+    },
+
+
+    {
+      "name": "Variable declaration",
+      "code": "let var = val;"
+    },
+    {
+      "name": "Constant declaration",
+      "code": "const name = val;",
       "category": "variables"
     },
     {
-      "code": "const $0 = $1;",
-      "name": "Declare constant",
+      "name": "Variable assignment",
+      "code": "var = val;",
       "category": "variables"
     },
+
+
     {
-      "code": "function $0($1) {\n\t$2\n}",
       "name": "Function declaration",
+      "code": "function name (params) {\n  do something...\n}",
       "category": "functions"
     },
     {
-      "code": "const $0 = ($1) => {\n\t$2\n};",
-      "name": "Arrow function declaration",
+      "name": "Arrow function",
+      "code": "const name = (params) => {\n  do something...\n};",
       "category": "functions"
     },
+
+
     {
-      "code": "class $0 {\n\tconstructor($1) {\n\t\t$2\n\t}\n}",
       "name": "Class declaration",
+      "code": "class ClassName {\n  constructor(params) {\n    this.property = value;\n  }\n}",
       "category": "classes"
     },
     {
-      "code": "try {\n\t$0\n} catch ($1) {\n\t$2\n}",
-      "name": "Try-catch block",
-      "category": "errors"
+      "name": "Do parent class's declaration",
+      "code": "super(params);",
+      "category": "classes"
     },
     {
-      "code": "throw new $0Error('$1');",
-      "name": "Throw an error",
-      "category": "errors"
+      "name": "Extend a class",
+      "code": "class ChildClass extends ParentClass {\n  constructor(params) {\n    super(params);\n  }\n}",
+      "category": "classes"
+    },
+
+
+    {
+      "name": "If statement",
+      "code": "if (condition) {\n  do something...\n}",
+      "category": "control"
     },
     {
-      "code": "import $0 from '$1';",
-      "name": "Import module",
-      "category": "modules"
+      "name": "If-else statement",
+      "code": "if (condition) {\n  do something...\n} else {\n  do something else...\n}",
+      "category": "control"
+    },
+
+    {
+      "name": "For loop",
+      "code": "for (let i = 0; i < length; i++) {\n  do something...\n}",
+      "category": "control"
     },
     {
-      "code": "export const $0 = $1;",
-      "name": "Export constant",
-      "category": "modules"
+      "name": "While loop",
+      "code": "while (condition) {\n  do something...\n}",
+      "category": "control"
+    },
+
+
+    {
+      "name": "Square root",
+      "code": "Math.sqrt(number);",
+      "category": "math"
     },
     {
-      "code": "export function $0($1) {\n\t$2\n}",
-      "name": "Export function",
-      "category": "modules"
+      "name": "Random number",
+      "code": "Math.random();",
+      "category": "math"
     },
     {
-      "code": "$0.addEventListener('$1', ($2) => {\n\t$3\n});",
+      "name": "Random integer",
+      "code": "Math.floor(Math.random() * range;",
+      "category": "math"
+    },
+    {
+      "name": "Round number",
+      "code": "Math.round(number);",
+      "category": "math"
+    },
+    {
+      "name": "Floor number",
+      "code": "Math.floor(number);",
+      "category": "math"
+    },
+    {
+      "name": "Ceil number",
+      "code": "Math.ceil(number);",
+      "category": "math"
+    },
+
+    {
+      "name": "Plus operator",
+      "code": "a + b",
+      "category": "operators"
+    },
+    {
+      "name": "Minus operator",
+      "code": "a - b",
+      "category": "operators"
+    },
+    {
+      "name": "Multiply operator",
+      "code": "a * b",
+      "category": "operators"
+    },
+    {
+      "name": "Divide operator",
+      "code": "a / b",
+      "category": "operators"
+    },
+    {
+      "name": "Modulus operator",
+      "code": "a % b",
+      "category": "operators"
+    },
+    {
+      "name": "Exponentiation operator",
+      "code": "a ** b",
+      "category": "operators"
+    },
+    {
+      "name": "Parentheses",
+      "code": "()",
+      "category": "operators"
+    },
+
+
+    {
       "name": "Add event listener",
+      "code": "element.addEventListener('event', function() {\n  do something...\n});",
       "category": "events"
     },
     {
-      "code": "document.getElementById('$0');",
-      "name": "Get element by ID",
+      "name": "Append child element",
+      "code": "parentElement.appendChild(childElement);",
       "category": "DOM"
     },
+
+
     {
-      "code": "async function $0($1) {\n\t$2\n}",
-      "name": "Async function declaration",
+      "name": "Fetch source",
+      "code": "fetch(url)\n  .then(response => response.json())\n  .then(data => {\n    do something with data...\n  })\n  .catch(error => console.error('Error:', error));",
       "category": "async"
     },
+
+
     {
-      "code": "await $0;",
-      "name": "Await expression",
-      "category": "async"
+      "name": "Import module",
+      "code": "import { member } from 'module';",
+      "category": "modules"
     },
     {
-      "code": "if ($0) {\n\t$1\n} else {\n\t$2\n}",
-      "name": "If-else statement",
-      "category": "control"
+      "name": "Export module",
+      "code": "export { member };",
+      "category": "modules"
+    },
+
+
+    {
+      "name": "Try-catch block",
+      "code": "try {\n  do something...\n} catch (error) {\n  console.error(error);\n}",
+      "category": "errors"
     },
     {
-      "code": "for (let $0 = 0; $0 < $1; $0++) {\n\t$2\n}",
-      "name": "For loop",
-      "category": "control"
+      "name": "Throw error",
+      "code": "throw new Error('Error message');",
+      "category": "errors"
     },
     {
-      "code": "while ($0) {\n\t$1\n}",
-      "name": "While loop",
-      "category": "control"
-    },
-    {
-      "code": "const $0 = [$1];",
-      "name": "Array declaration",
-      "category": "objects"
-    },
-    {
-      "code": "const $0 = {$1: $2};",
-      "name": "Object declaration",
-      "category": "objects"
-    },
-    {
-      "code": "$0.$1 = $2;",
-      "name": "Set object property",
-      "category": "objects"
-    },
-    {
-      "code": "$0[$1] = $2;",
-      "name": "Set array element",
-      "category": "objects"
-    },
-    {
-      "code": "($0 + $1);",
-      "name": "Addition",
-      "category": "operators"
-    },
-    {
-      "code": "($0 - $1);",
-      "name": "Subtraction",
-      "category": "operators"
-    },
-    {
-      "code": "($0 * $1);",
-      "name": "Multiplication",
-      "category": "operators"
-    },
-    {
-      "code": "($0 / $1);",
-      "name": "Division",
-      "category": "operators"
-    },
-    {
-      "code": "($0 % $1);",
-      "name": "Modulo",
-      "category": "operators"
-    },
-    {
-      "code": "($0 && $1);",
-      "name": "Logical AND",
-      "category": "operators"
-    },
-    {
-      "code": "($0 || $1);",
-      "name": "Logical OR",
-      "category": "operators"
-    },
-    {
-      "code": "(!$0);",
-      "name": "Logical NOT",
-      "category": "operators"
+      "name": "New error type",
+      "code": "class CustomError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'CustomError';\n  }\n}",
+      "category": "errors"
     }
+
+
   ]
 }

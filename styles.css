@@ -117,6 +117,13 @@ h6 {
   filter: brightness(90%);
 }
 
+.sidebar {
+  position: absolute;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 200px;
+  height: calc(100% - 40px); 
+}
 
 /* Pseudoclass */
 

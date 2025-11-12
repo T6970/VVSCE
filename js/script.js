@@ -1,7 +1,4 @@
-const sidebar = document.createElement('div');
-
-// card specifies appearence, sidebar specifies position and size
-sidebar.className = 'card sidebar';
+const sidebar = document.getElementById("sidebar");
 
 async function loadSnippets() {
   const response = await fetch('/snippets/js.json');
@@ -19,8 +16,6 @@ async function loadSnippets() {
     eachSnippet.innerHTML = `<h2>${el.name}</h2>`
     sidebar.appendChild(eachSnippet) 
   });
-
-  body.appendChild(sidebar)
 }
 
 loadSnippets();

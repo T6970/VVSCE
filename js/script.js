@@ -1,4 +1,3 @@
-import { fetchFile } from './network.js';
 const sidebar = document.createElement('div');
 
 // card specifies appearence, sidebar specifies position and size
@@ -8,7 +7,6 @@ async function loadSnippets() {
   const response = await fetch('/snippets/js.json');
   const snippetList = await response.json();
 
-  // Always check if the property exists
   if (snippetList.snippets) {
     console.log(snippetList.snippets);
   } else {

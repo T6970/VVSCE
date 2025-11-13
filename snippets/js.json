@@ -45,7 +45,8 @@
 
     {
       "name": "Variable declaration",
-      "code": "let var = val;"
+      "code": "let var = val;",
+      "category": "variables"
     },
     {
       "name": "Constant declaration",

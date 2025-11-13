@@ -1,6 +1,10 @@
+import { insertTextAtCursor } from "./insert.js";
+
+
 const sidebar    = document.getElementById("sidebar");
 const snippetBox = document.getElementById("list");
 
+// fetch and append all the snippets
 (async () => {
   const response    = await fetch('/snippets/js.json');
   const snippetList = await response.json();
@@ -13,8 +17,13 @@ const snippetBox = document.getElementById("list");
   
   snippetList.snippets.forEach(el => {
     const eachSnippet = document.createElement('button');
-    eachSnippet.className = `nest card button insert`
+    eachSnippet.content = el
+    eachSnippet.className = `card button insert`
     eachSnippet.innerHTML = `<h2>${el.name}</h2>`
+    eachSnippet.addEventListener("click", () => {
+      console.log(eachSnippet)
+      insertTextAtCursor(eachSnippet.content.code)
+    });
     snippetBox.appendChild(eachSnippet)
   });
 })();

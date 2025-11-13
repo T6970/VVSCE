@@ -13,17 +13,16 @@ const snippetBox = document.getElementById("list");
     console.log(snippetList.snippets);
   } else {
     console.error('No snippets found in JSON:', snippetList);
-  }
+  };
   
   snippetList.snippets.forEach(el => {
     const eachSnippet = document.createElement('button');
-    eachSnippet.content = el
-    eachSnippet.className = `card button insert`
-    eachSnippet.innerHTML = `<h2>${el.name}</h2>`
+    eachSnippet.content = el;
+    eachSnippet.className = `card button insert`;
+    eachSnippet.innerHTML = `<h2>${el.name}</h2>`;
     eachSnippet.addEventListener("click", () => {
-      console.log(eachSnippet)
-      insertTextAtCursor(eachSnippet.content.code)
+      insertTextAtCursor(eachSnippet.content.code);
     });
-    snippetBox.appendChild(eachSnippet)
+    snippetBox.appendChild(eachSnippet);
   });
 })();

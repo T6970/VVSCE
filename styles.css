@@ -86,7 +86,7 @@ h6 {
 }
 
 .button {
-  width: 60px;
+  width: 200px;
 }
 
 .text {
@@ -110,13 +110,11 @@ h6 {
   margin-left: 10px;
   margin-right: 10px;
   width: 200px;
-  height: calc(100% - 40px); 
+  height: calc(100% - 80px); 
   display: flex;
+  align-items: stretch;
   flex-direction: column;
-}
-
-.insert {
-  width: 150px;
+  overflow-y: auto;
 }
 
 /* Pseudoclass */

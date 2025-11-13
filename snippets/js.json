@@ -22,12 +22,12 @@
       "category": "console"
     },
     {
-      "name": "Error in console",
+      "name": "Console error",
       "code": "console.error(message);",
       "category": "errors"
     },
     {
-      "name": "Warning in console",
+      "name": "Console warn",
       "code": "console.warn(message);",
       "category": "console"
     },

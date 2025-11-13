@@ -1,7 +1,8 @@
-const sidebar = document.getElementById("sidebar");
+const sidebar    = document.getElementById("sidebar");
+const snippetBox = document.getElementById("list");
 
-async function loadSnippets() {
-  const response = await fetch('/snippets/js.json');
+(async () => {
+  const response    = await fetch('/snippets/js.json');
   const snippetList = await response.json();
 
   if (snippetList.snippets) {
@@ -12,11 +13,8 @@ async function loadSnippets() {
   
   snippetList.snippets.forEach(el => {
     const eachSnippet = document.createElement('button');
-    eachSnippet.className = `nest card`
+    eachSnippet.className = `nest card button insert`
     eachSnippet.innerHTML = `<h2>${el.name}</h2>`
-    sidebar.appendChild(eachSnippet) 
+    snippetBox.appendChild(eachSnippet)
   });
-}
-
-loadSnippets();
-
+})();

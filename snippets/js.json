@@ -24,7 +24,7 @@
     {
       "name": "Console error",
       "code": "console.error(message);",
-      "category": "errors"
+      "category": "console"
     },
     {
       "name": "Console warn",

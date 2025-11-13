@@ -108,11 +108,11 @@ h6 {
 
 .sidebar {
   position: absolute;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 200px;
-  height: calc(100% - 80px); 
-
+  margin: 0px;
+  width: 250px;
+  top: 20px;
+  bottom: 20px;
+  left: 20px
 }
 
 .flex {
@@ -120,6 +120,20 @@ h6 {
   align-items: stretch;
   flex-direction: column;
   overflow-y: auto;
+}
+
+.snippet-list {
+  height: calc(100% - 130px);
+}
+
+.editor {
+  position: absolute;
+  margin: 0%;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  left: 330px;
+  max-width: 10000px;
 }
 
 /* Pseudoclass */

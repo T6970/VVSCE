@@ -136,13 +136,3 @@ h6 {
   max-width: 10000px;
   font-family: monospace;
 }
-
-/* Pseudoclass */
-
-button:hover {
-  background-color: var(--button-press-color);
-}
-
-button:active {
-  background-color: var(--highlight-color);
-}

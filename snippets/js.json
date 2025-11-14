@@ -18,27 +18,27 @@
 
     {
       "name": "Log to console",
-      "code": "console.log(message);",
+      "code": "console.log('message');",
       "category": "console"
     },
     {
       "name": "Console error",
-      "code": "console.error(message);",
+      "code": "console.error('message');",
       "category": "console"
     },
     {
       "name": "Console warn",
-      "code": "console.warn(message);",
+      "code": "console.warn('message');",
       "category": "console"
     },
     {
       "name": "Alert message",
-      "code": "alert(message);",
+      "code": "alert('message');",
       "category": "console"
     },
     {
       "name": "Prompt input",
-      "code": "const input = prompt(message, default);",
+      "code": "const input = prompt('message', default);",
       "category": "console"
     },
 
@@ -72,7 +72,7 @@
     },
     {
       "name": "IIFE",
-      "code": "(() => {\n  \n\n})()",
+      "code": "((params) => {\n  \n\n})()",
       "category": "functions"
     },
 

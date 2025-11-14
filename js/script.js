@@ -1,8 +1,9 @@
-import { insertTextAtCursor } from "./insert.js";
+import { insertTextAtCursor, isCursorIn } from "./insert.js";
 
 
 const sidebar    = document.getElementById("sidebar");
 const snippetBox = document.getElementById("list");
+const editor     = document.getElementById("editor");
 
 // fetch and append all the snippets
 (async () => {
@@ -25,7 +26,7 @@ const snippetBox = document.getElementById("list");
     eachSnippet.style.backgroundColor = snippetList.categories[el.category];
 
     eachSnippet.addEventListener("click", () => {
-      insertTextAtCursor(eachSnippet.content.code);
+      if (isCursorIn(editor)) insertTextAtCursor(eachSnippet.content.code);
     });
     snippetBox.appendChild(eachSnippet);
   });

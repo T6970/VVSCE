@@ -17,3 +17,20 @@ export const insertTextAtCursor = (text) => {
   sel.removeAllRanges();
   sel.addRange(range);
 }
+
+export const isCursorIn = (div) => {
+  const selection = window.getSelection();
+
+  if (!selection.rangeCount) return false;
+  const node = selection.anchorNode;
+
+  if (!node) return false;
+
+  let currentNode = node;
+  while (currentNode) {
+      if (currentNode === div) return true;
+      currentNode = currentNode.parentNode;
+  }
+
+  return false;
+}

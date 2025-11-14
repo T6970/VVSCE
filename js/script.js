@@ -16,10 +16,14 @@ const snippetBox = document.getElementById("list");
   };
   
   snippetList.snippets.forEach(el => {
+
     const eachSnippet = document.createElement('button');
     eachSnippet.content = el;
+
     eachSnippet.className = `card button insert`;
     eachSnippet.innerHTML = `<h2>${el.name}</h2>`;
+    eachSnippet.style.backgroundColor = snippetList.categories[el.category];
+
     eachSnippet.addEventListener("click", () => {
       insertTextAtCursor(eachSnippet.content.code);
     });

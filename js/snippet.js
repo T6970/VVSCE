@@ -31,7 +31,7 @@ export const appendSnippets = async (url, target) => {
     eachSnippet.addEventListener("click", () => {
       if (isCursorIn(editor)) insertTextAtCursor(eachSnippet.content.code);
     });
-    eachSnippet.addEventListener("mousedown", () => {
+    eachSnippet.addEventListener("mouseover", () => {
 
       function darken(hex, percent) {
         hex = hex.replace('#', '');
@@ -56,9 +56,6 @@ export const appendSnippets = async (url, target) => {
         
       eachSnippet.style.backgroundColor = darken(eachSnippet.color, 30)
 
-    });
-    eachSnippet.addEventListener("mouseup", () => {
-      eachSnippet.style.backgroundColor = eachSnippet.color
     });
     eachSnippet.addEventListener("mouseleave", () => {
       eachSnippet.style.backgroundColor = eachSnippet.color

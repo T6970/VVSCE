@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #fff;
   color: #222;
   --card-color: #eee;
@@ -46,7 +48,7 @@ h6 {
 }
 
 * {
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 /* Classes */
@@ -148,10 +150,19 @@ h6 {
   flex-direction: row;
   align-items: stretch;
   position: absolute;
-  right: 20px;
-  left: 330px;
+  right: 15px;
+  left: 325px;
   top: 20px;
   height: 40px;
   padding: 0px;
 }
 
+/* Pseudoclasses */
+
+button:hover {
+  background-color: var(--button-press-color);
+}
+
+button:active {
+  background-color: var(--highlight-color);
+}

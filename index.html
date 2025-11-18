@@ -12,15 +12,12 @@
 </head>
 
 <body id="body">
-  <div class="card sidebar" id="sidebar">
+  <div class="card sidebar margin" id="sidebar">
     <h1>Snippets</h1>
-    <div class="nest card flex snippet-list" id="list"></div>
+    <div class="nest card column flex snippet-list" id="list"></div>
   </div>
-  <div class="toolbar">
-    <button class="card button" id="html-tab"   >HTML</button>
-    <button class="card button" id="css-tab"    >CSS</button>
-    <button class="card button" id="js-tab"     >JS</button>
-    <button class="card button" id="preview-tab">Preview</button>
+  <div class="flex row zero-padding flex-stretch margin" id="tab-bar">
+    <button class="card"></button>
   </div>
   <div contenteditable="true" spellcheck="false" class="editor card" id="editor"></div>
 </body>

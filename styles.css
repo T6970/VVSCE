@@ -54,8 +54,6 @@ h6 {
 /* Classes */
 
 .card {
-  margin: 0 auto;
-
   background-color: var(--card-color);
   padding: 20px;
   border-style: hidden;
@@ -119,15 +117,33 @@ h6 {
   left: 20px
 }
 
+.margin {
+  margin: 20px;
+}
+
 .flex {
   display: flex;
-  align-items: stretch;
-  flex-direction: column;
   overflow-y: auto;
 }
 
-.snippet-list {
-  height: calc(100% - 130px);
+.flex-stretch {
+  align-items: stretch;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.zero-margin {
+  margin: 0px;
+}
+
+.zero-padding {
+  padding: 0px;
 }
 
 .editor {

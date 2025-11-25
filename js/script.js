@@ -4,8 +4,10 @@ import { insertTextAtCursor } from "./insert.js";
 const editor = document.getElementById("editor");
 
 editor.addEventListener("keydown", (e) => {
-  if (e.key === lang.config.blockStart) {
-    e.preventDefault()
-    insertTextAtCursor(`${lang.config.blockStart}\n${" ".repeat(lang.config.indent+1)}\n${lang.config.blockEnd}`)
+  e.preventDefault();
+  if (e.key === "Tab") {
+    insertTextAtCursor(" ".repeat(lang.config.indent))
+  } else if (e.key === lang.config.blockStart) {
+    insertTextAtCursor(`${lang.config.blockStart}\n${" ".repeat(lang.config.indent)}\n${lang.config.blockEnd}`);
   }
-})
+});

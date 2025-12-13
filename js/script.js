@@ -1,13 +1,3 @@
-import { lang } from "../snippets/js.js"
-import { insertTextAtCursor } from "./insert.js";
+import { Nqde } from 'https://cdn.jsdelivr.net/gh/T6970/Nqde@main/src/index.js'
 
-const editor = document.getElementById("editor");
-
-editor.addEventListener("keydown", (e) => {
-  e.preventDefault();
-  if (e.key === "Tab") {
-    insertTextAtCursor(" ".repeat(lang.config.indent))
-  } else if (e.key === lang.config.blockStart) {
-    insertTextAtCursor(`${lang.config.blockStart}\n${" ".repeat(lang.config.indent)}\n${lang.config.blockEnd}`);
-  }
-});
+Nqde.newCard("editor")

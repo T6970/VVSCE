@@ -1,3 +1,4 @@
 import { Nqde } from 'https://cdn.jsdelivr.net/gh/T6970/Nqde@main/src/index.js'
 
 Nqde.newCard("editor")
+Nqde.setContent("editor", '<div contenteditable="true">Write code here</div>')

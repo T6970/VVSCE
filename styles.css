@@ -147,9 +147,8 @@ h6 {
 }
 
 .editor {
-  width: calc(vw - 40px);
-  height: calc(vh - 40px);
   font-family: monospace;
+  font-size: medium;
 }
 
 .insert {

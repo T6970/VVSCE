@@ -1,17 +1,5 @@
 import { insert } from "./cursor.js"
-
-const loadConfig = async (filename) => {
-  try {
-    const raw = await fetch(`../conf/${filename}.json`)
-    if (!raw.ok) throw new Error(`Failed to fetch ${filename}`)
-    
-    const lang = await raw.json()
-    return lang
-  } catch (e) {
-    console.error(e)
-  }
-}
-
+import { loadConfig } from "./loader.js"
 
 const main = async () => {
   const editor = document.getElementById("editor")

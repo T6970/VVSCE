@@ -148,7 +148,9 @@ h6 {
 
 .editor {
   font-family: monospace;
-  font-size: medium;
+  font-size: large;
+  height: calc(100vh - 80px);
+  overflow: scroll;
 }
 
 .insert {

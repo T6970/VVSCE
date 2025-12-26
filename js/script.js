@@ -23,7 +23,7 @@ const main = async () => {
   for (const [original, replace] of Object.entries(lang.keyOverride)) {
     editor.addEventListener("keydown", (e) => {
       if (e.key === original) {
-        e.preventDefault
+        e.preventDefault()
         console.log(replace)
         insert(replace)
       }

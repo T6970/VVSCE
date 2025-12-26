@@ -6,7 +6,6 @@ const loadConfig = async (filename) => {
     if (!raw.ok) throw new Error(`Failed to fetch ${filename}`)
     
     const lang = await raw.json()
-    console.log(lang)
     return lang
   } catch (e) {
     console.error(e)
@@ -24,7 +23,6 @@ const main = async () => {
     editor.addEventListener("keydown", (e) => {
       if (e.key === original) {
         e.preventDefault()
-        console.log(replace)
         insert(replace)
       }
     })

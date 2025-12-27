@@ -1,4 +1,4 @@
-import { insert } from "./cursor.js"
+import { insertBefore } from "./cursor.js"
 import { loadConfig } from "./loader.js"
 
 const main = async () => {

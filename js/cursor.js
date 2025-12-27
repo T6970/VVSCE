@@ -12,8 +12,9 @@ export const insertAfter = (text) => {
   if (!sel.rangeCount) return
 
   const range = sel.getRangeAt(0)
-  range.insertNode(document.createTextNode(text))
-  range.setStartAfter(textNode);
+  const insert = document.createTextNode(text)
+  range.insertNode(insert)
+  range.setStartAfter(insert);
   range.collapse(true);
   sel.removeAllRanges();
   sel.addRange(range);

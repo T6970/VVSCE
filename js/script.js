@@ -11,7 +11,7 @@ const main = async () => {
     editor.addEventListener("keydown", (e) => {
       if (e.key === original) {
         e.preventDefault()
-        insert(replace)
+        insertBefore(replace)
       }
     })
   }

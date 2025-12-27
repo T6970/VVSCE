@@ -1,4 +1,4 @@
-export const insert = (text) => {
+export const insertBefore = (text) => {
   const sel = window.getSelection()
   if (!sel.rangeCount) return
 

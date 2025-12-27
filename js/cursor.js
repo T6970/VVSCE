@@ -14,8 +14,8 @@ export const insertAfter = (text) => {
   const range = sel.getRangeAt(0)
   const insert = document.createTextNode(text)
   range.insertNode(insert)
-  range.setStartAfter(insert);
-  range.collapse(true);
-  sel.removeAllRanges();
-  sel.addRange(range);
+  range.setStartAfter(insert)
+  range.collapse(true)
+  sel.removeAllRanges()
+  sel.addRange(range)
 }

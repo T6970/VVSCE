@@ -1,4 +1,4 @@
-import { insertBefore } from "./cursor.js"
+import { insertAfter, insertBefore } from "./cursor.js"
 import { loadConfig } from "./loader.js"
 
 const main = async () => {
@@ -6,12 +6,14 @@ const main = async () => {
 
   let lang
   lang = await loadConfig("js")
+  console.log(lang)
 
-  for (const [original, replace] of Object.entries(lang.keyOverride)) {
+  for (const [original, {before, after}] of Object.entries(lang.keyOverride)) {
     editor.addEventListener("keydown", (e) => {
       if (e.key === original) {
         e.preventDefault()
-        insertBefore(replace)
+        insertBefore(before)
+        insertAfter(after)
       }
     })
   }

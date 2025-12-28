@@ -15,4 +15,5 @@ export const insertAfter = (text) => {
   const insert = document.createTextNode(text)
   range.insertNode(insert)
   range.setStartBefore(insert)
+  range.collapse(true)
 }

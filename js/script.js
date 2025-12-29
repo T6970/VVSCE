@@ -17,6 +17,18 @@ const main = async () => {
       }
     })
   }
+
+  editor.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter") return
+    for (const indentChar of lang.indentChars) {
+      const cursorPos = editor.selectionStart
+      const beforeLength = editor.value.slice(0,cursorPos)
+      if (editor.value.slice((beforeLength - indentChar.length), cursorPos) === indentChar) {
+        insertBefore(`\n${" ".repeat(lang.tabSize)}`)
+        insertAfter("\n")
+      }
+    }
+  })
 }
 
 main()

@@ -22,8 +22,8 @@ const main = async () => {
     if (e.key !== "Enter") return
     for (const indentChar of lang.indentChars) {
       const cursorPos = editor.selectionStart
-      const beforeLength = editor.value.slice(0,cursorPos)
-      if (editor.value.slice((beforeLength - indentChar.length), cursorPos) === indentChar) {
+      const beforeLength = editor.innerText.slice(0,cursorPos)
+      if (editor.innerText.slice((beforeLength - indentChar.length), cursorPos) === indentChar) {
         insertBefore(`\n${" ".repeat(lang.tabSize)}`)
         insertAfter("\n")
       }
@@ -31,4 +31,6 @@ const main = async () => {
   })
 }
 
-main()
+document.addEventListener("DOMContentLoaded", () => {
+  main()
+})

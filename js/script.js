@@ -2,7 +2,7 @@ import { insertAfter, insertBefore } from "./cursor.js"
 import { loadConfig } from "./loader.js"
 
 const main = async () => {
-  
+
   const editor = document.getElementById("editor")
 
   let lang
@@ -31,6 +31,12 @@ const main = async () => {
           insertBefore(`\n${" ".repeat(lang.tabSize)}`)
           insertAfter("\n")
         }
+      }
+    })
+    editor.addEventListener("keydown", (e) => {
+      if (e.key === "Tab") {
+        e.preventDefault()
+        insertBefore(`${" ".repeat(lang.tabSize)}`)
       }
     })
   }
